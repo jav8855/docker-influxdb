@@ -1,9 +1,23 @@
 version: '3'
+
+# influxdb 2.7.1
+# 
+#services:
+#  influxdb:
+#    image: influxdb:2.7.1
+#    ports:
+#      - 8086:8086
+#    volumes:
+#      - ./volumes/influxdb/var/lib/influxdb2:/var/lib/influxdb2
+
+# influxdb 1.8
+#
 services:
   influxdb:
-    image: influxdb
+    image: influxdb:1.8
+    container_name: influxdb
     ports:
       - 8086:8086
     volumes:
-      - ./volumes/influxdb/var/lib/influxdb2:/var/lib/influxdb2
+      - ./volumes/influxdb/var/lib/influxdb:/var/lib/influxdb
 
